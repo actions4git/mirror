@@ -1,0 +1,13 @@
+name: Mirror octocat/hello-world actions4git/mirror-try-me
+on:
+  schedule:
+    - cron: "36 */6 * * *"
+jobs:
+  mirror-octocat-hello-world-to-actions4git-mirror-try-me:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions4git/setup-git@v1
+        with:
+          token: ${{ secrets.MIRROR_TRY_ME_TOKEN }}
+      - run: git clone --bare https://github.com/octocat/hello-world.git .
+      - run: git push --mirror https://github.com/actions4git/mirror-try-me.git

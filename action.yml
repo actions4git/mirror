@@ -1,0 +1,6 @@
+name: Create GitHub Issue comment
+description: 💬 Create a new comment on a GitHub Issue
+
+branding:
+  icon: refresh-cw
+  color: orange

@@ -1,0 +1,13 @@
+name: Update marketplace
+on:
+  push:
+    branches: "main"
+jobs:
+  update-marketplace:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git tag marketplace --force
+      - run: git push origin marketplace --force
