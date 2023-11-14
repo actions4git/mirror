@@ -1,6 +1,7 @@
 name: Mirror mingw/regex to actions4git/mirror-try-me
 on:
   push:
+    branches: "main"
     paths: .github/workflows/try-me.yml
   schedule:
     - cron: "36 */6 * * *"
