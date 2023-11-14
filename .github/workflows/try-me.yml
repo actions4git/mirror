@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: "36 */6 * * *"
   workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 jobs:
   mirror-mingw-regex-to-actions4git-mirror-try-me:
     runs-on: ubuntu-latest
