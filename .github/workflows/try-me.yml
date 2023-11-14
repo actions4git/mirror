@@ -1,4 +1,4 @@
-name: Mirror octocat/hello-world actions4git/mirror-try-me
+name: Mirror octocat/hello-world to actions4git/mirror-try-me
 on:
   push:
     paths: .github/workflows/try-me.yml
