@@ -8,6 +8,7 @@ name: Mirror mingw/regex to octocat/mingw-regex
 on:
   schedule:
     - cron: "36 */6 * * *"
+  workflow_dispatch:
 jobs:
   mirror-mingw-regex-to-octocat-mingw-regex:
     runs-on: ubuntu-latest

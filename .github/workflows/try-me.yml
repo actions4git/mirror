@@ -1,7 +1,10 @@
 name: Mirror octocat/hello-world actions4git/mirror-try-me
 on:
+  push:
+    paths: .github/workflows/try-me.yml
   schedule:
     - cron: "36 */6 * * *"
+  workflow_dispatch:
 jobs:
   mirror-octocat-hello-world-to-actions4git-mirror-try-me:
     runs-on: ubuntu-latest
