@@ -16,6 +16,9 @@
 
 ## Usage
 
+![GitHub Actions](https://img.shields.io/static/v1?style=for-the-badge&message=GitHub+Actions&color=2088FF&logo=GitHub+Actions&logoColor=FFFFFF&label=)
+![Git](https://img.shields.io/static/v1?style=for-the-badge&message=Git&color=F05032&logo=Git&logoColor=FFFFFF&label=)
+
 ```yml
 # octocat/.github or another third repository
 # .github/workflows/mirror-mingw-regex-to-octocat-mingw-regex.yml
