@@ -3,7 +3,7 @@
 🕶️ Mirror a Git source to another Git destination
 
 <p align=center>
-  <img src="https://i.imgur.com/vU2bVL5.png">
+  <img width=400 src="https://i.imgur.com/vU2bVL5.png">
 </p>
 
 <div align=center>
