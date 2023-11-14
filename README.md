@@ -34,9 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare https://git.code.sf.net/p/mingw/regex .
-      - run:
-          git push --mirror
-          "https://x:$TOKEN@github.com/octocat/mingw-regex.git"
+      - run: git push --mirror "https://x:$TOKEN@github.com/octocat/mingw-regex.git"
         env:
           TOKEN: ${{ secrets.MINGW_REGEX_TOKEN }}
 ```
