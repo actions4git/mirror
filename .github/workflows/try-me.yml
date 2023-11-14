@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare https://github.com/octocat/hello-world.git .
-      - run: |
-          git config http.https://github.com/.extraheader "AUTHORIZATION: basic $GITHUB_TOKEN"
+      - run: git push --mirror "https://x:$TOKEN@github.com/actions4git/mirror-try-me.git"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: git push --mirror https://github.com/actions4git/mirror-try-me.git
+          TOKEN: ${{ secrets.MIRROR_TRY_ME_TOKEN }}

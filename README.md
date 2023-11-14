@@ -1,6 +1,10 @@
 # mirror
 🕶️ Mirror a Git source to another Git destination
 
+<!-- prettier-ignore -->
+[Try me workflow](https://github.com/actions4git/mirror/blob/main/.github/workflows/try-me.yml)
+| [Try me mirror](https://github.com/actions4git/mirror-try-me)
+
 ```yml
 # octocat/.github or another third repository
 # .github/workflows/mirror-mingw-regex-to-octocat-mingw-regex.yml
