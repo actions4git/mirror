@@ -1,5 +1,5 @@
-name: Create GitHub Issue comment
-description: 💬 Create a new comment on a GitHub Issue
+name: Mirror Git repository
+description: 🕶️ Mirror a Git source to another Git destination
 
 branding:
   icon: refresh-cw
