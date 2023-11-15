@@ -1,5 +1,5 @@
 name: Mirror Git repository 2
-description: 🕶️ Mirror a Git source to another Git destination
+description: 🔄 Mirror GitLab, SourceForge, GitHub, and other Git repositories
 
 branding:
   icon: refresh-cw

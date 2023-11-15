@@ -1,4 +1,4 @@
-name: Mirror mingw/regex to actions4git/mirror-try-me
+name: Mirror
 on:
   push:
     branches: "main"
@@ -10,10 +10,10 @@ concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
 jobs:
-  mirror-mingw-regex-to-actions4git-mirror-try-me:
+  mirror:
     runs-on: ubuntu-latest
     steps:
-      - run: git clone --bare https://git.code.sf.net/p/mingw/regex .
+      - run: git clone --mirror https://git.code.sf.net/p/mingw/regex .
       - run: git push --mirror "https://x:$TOKEN@github.com/actions4git/mirror-try-me.git"
         env:
           TOKEN: ${{ secrets.MIRROR_TRY_ME_TOKEN }}
