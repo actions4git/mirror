@@ -1,4 +1,4 @@
-name: Mirror Git repository 2
+name: Mirror a Git repository
 description: 🔄 Mirror GitLab, SourceForge, GitHub, and other Git repositories
 
 branding:
