@@ -37,11 +37,11 @@ on:
   schedule:
     - cron: "36 */6 * * *"
   workflow_dispatch:
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: true
 jobs:
   mirror:
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare "https://github.com/$GITHUB_REPOSITORY" .
@@ -54,6 +54,9 @@ Make sure you [create a GitLab personal access token] with the permissions
 needed to write to the myorg/my-project Git destination repository. Then make
 sure you add the secret token value to the GitHub settings panel for the source
 repository.
+
+If you're using a non-public GitHub repository you may need to use [`gh auth
+setup-git`] to configure your credentials properly.
 
 ### Mirror from GitLab to GitHub
 
@@ -69,11 +72,11 @@ on:
   schedule:
     - cron: "36 */6 * * *"
   workflow_dispatch:
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: true
 jobs:
   mirror:
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare https://gitlab.com/myorg/my-project.git .
@@ -100,11 +103,11 @@ on:
   schedule:
     - cron: "36 */6 * * *"
   workflow_dispatch:
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: true
 jobs:
   mirror:
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare https://git.code.sf.net/p/myorg/my-project .
@@ -120,4 +123,5 @@ GitHub token to your third repository that will manage the scheduled syncing.
 <!-- prettier-ignore-start -->
 [create a github personal access token]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 [create a gitlab personal access token]: https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token
+[`gh auth setup-git`]: https://cli.github.com/manual/gh_auth_setup-git
 <!-- prettier-ignore-end -->
