@@ -38,8 +38,6 @@ on:
   push:
   create:
   delete:
-  schedule:
-    - cron: "36 */6 * * *"
   workflow_dispatch:
 jobs:
   mirror:
