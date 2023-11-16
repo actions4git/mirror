@@ -40,9 +40,9 @@ on:
   delete:
   workflow_dispatch:
 jobs:
-  mirror:
+  gitlab-myorg-my-project:
     concurrency:
-      group: ${{ github.workflow }}
+      group: ${{ github.workflow }}-gitlab
       cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
@@ -75,10 +75,7 @@ on:
     - cron: "36 */6 * * *"
   workflow_dispatch:
 jobs:
-  mirror:
-    concurrency:
-      group: ${{ github.workflow }}
-      cancel-in-progress: true
+  mirror1:
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare https://gitlab.com/myorg/my-project.git .
@@ -113,7 +110,7 @@ on:
     - cron: "36 */6 * * *"
   workflow_dispatch:
 jobs:
-  mirror:
+  mirror1:
     concurrency:
       group: ${{ github.workflow }}
       cancel-in-progress: true
