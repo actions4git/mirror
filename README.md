@@ -10,6 +10,10 @@
   <a href="https://github.com/actions4git/mirror-try-me">Try me mirror</a>
 </p>
 
+😵 You don't even need to use a GitHub Action! \
+🔶 Use native Git commands to mirror a repository \
+:octocat: Works with _any_ Git repository!
+
 ## Usage
 
 ![GitHub Actions](https://img.shields.io/static/v1?style=for-the-badge&message=GitHub+Actions&color=2088FF&logo=GitHub+Actions&logoColor=FFFFFF&label=)
@@ -85,6 +89,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
 ```
 
+⚠️ We are using a third repository. Why? If we stored our workflow in the
+destination repository on GitHub it would be overwritten by the incoming
+`git push --mirror`. It's recommended to use a meta repository like
+octocat/.github or myorg/.github to manage mirroring. You can use the same
+workflow file for multiple mirroring jobs if you have multiple mirrors you want
+to sync.
+
 You'll need to [create a GitHub personal access token] with write permissions to
 the contents of the octocat/my-project GitHub repository and then add the secret
 GitHub token to your third repository that will manage the scheduled syncing.
@@ -115,6 +126,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
 ```
+
+⚠️ We are using a third repository. Why? If we stored our workflow in the
+destination repository on GitHub it would be overwritten by the incoming
+`git push --mirror`. It's recommended to use a meta repository like
+octocat/.github or myorg/.github to manage mirroring. You can use the same
+workflow file for multiple mirroring jobs if you have multiple mirrors you want
+to sync.
 
 You'll need to [create a GitHub personal access token] with write permissions to
 the contents of the octocat/my-project GitHub repository and then add the secret
