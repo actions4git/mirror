@@ -111,9 +111,6 @@ on:
   workflow_dispatch:
 jobs:
   mirror1:
-    concurrency:
-      group: ${{ github.workflow }}
-      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare https://git.code.sf.net/p/myorg/my-project .
