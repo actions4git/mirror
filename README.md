@@ -7,7 +7,7 @@
 </p>
 
 <p align=center>
-  <a href="https://github.com/actions4git/mirror-try-me">Try me mirror</a>
+  <a href="https://github.com/actions4git/mirror-example">Example mirror</a>
 </p>
 
 😵 You don't even need to use a GitHub Action! \
