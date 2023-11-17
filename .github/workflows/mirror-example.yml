@@ -1,8 +1,8 @@
-name: Mirror
+name: Mirror example
 on:
   push:
     branches: "main"
-    paths: .github/workflows/try-me.yml
+    paths: .github/workflows/mirror-example.yml
   schedule:
     - cron: "36 */6 * * *"
   workflow_dispatch:
@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: git clone --mirror https://git.code.sf.net/p/mingw/regex .
-      - run: git push --mirror "https://x:$TOKEN@github.com/actions4git/mirror-try-me.git"
+      - run: git push --mirror "https://x:$TOKEN@github.com/actions4git/mirror-example.git"
         env:
           TOKEN: ${{ secrets.MIRROR_TRY_ME_TOKEN }}
